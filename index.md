@@ -47,4 +47,7 @@ In case of older python installations, pip is installed by default. therefore, y
 ```script
 python get-pip.py
 ```
-This would install pip for the python installation.
+This would install pip for the python installation. And you can continue installingpip packages as usual using
+```console
+pip install [python-packages]
+```
