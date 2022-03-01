@@ -1,37 +1,50 @@
-## Welcome to GitHub Pages
+# Python Installation on Windows
 
-You can use the [editor on GitHub](https://github.com/kumar10725/Python-Installation-Guide/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This guide aims to demonstrate the installation process of python on windows system using different techniques.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## Using Anaconda
+Download latest version of anaconda from official website using this [link](https://www.anaconda.com/products/individual).
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The most recent versions supports *Windows 10* and later. However if you are operating on *Windows 7*, you may download one of the older versions like 2020 or 2019 from the [archives](https://repo.anaconda.com/archive/).
 
-```markdown
-Syntax highlighted code block
+## Using *Python* executables
+You can download the latest version of python from their official [website](https://www.python.org/downloads/).
 
-# Header 1
-## Header 2
-### Header 3
+In order to run the python from terminal, you can open 'cmd' on windows and run following command.
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```console
+python
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+To install a package using pip, simply use pip install command as follow:
 
-### Jekyll Themes
+```console
+pip install [your-package-name]
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kumar10725/Python-Installation-Guide/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Debuging the installation errors.
+A commonly occuring error in installation of *Python* using executables is 
+```console
+python is not recognized as an internal or external command
+```
+One of common reason for this error is due to environment variable are not set properly. To fix this issue open the *advanced system settings* as follow and add a new path to system variables pointing to the installation location of Python.
 
-### Support or Contact
+![settings in windows explorer](./imgs/1.png)
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+![open the settings](./imgs/2.png)
+
+![environment variables](./imgs/3.png)
+
+![system variables](./imgs/4.png)
+
+### Debugging the pip errors.
+In case of older python installations, pip is installed by default. therefore, you may need to install it manually using [get-pip.py](https://bootstrap.pypa.io/get-pip.py). 
+* Go to the above website and copy-paste its content to a .txt file.
+* Save the .txt file as "get-pip.py".
+* Open cmd and navigate to the "get-pip.py" folder using `cd` command. 
+* Then run the following command.
+```script
+python get-pip.py
+```
+This would install pip for the python installation.
